@@ -22,7 +22,8 @@ def read(img_path):
                           color=(0, 255, 0),
                           thickness=3)
 
-    print(r)
+    for w in r:
+        print(w)
     plt.figure(figsize=(8, 8))
     plt.imshow(img[:, :, ::-1])
     plt.axis('off')
@@ -31,6 +32,6 @@ def read(img_path):
 
 reader = easyocr.Reader(['ko', 'en'])
 
-img_path = 'sample4.jpg'
+img_path = 'young.jpg'
 threshold = 0.5
 read(img_path)
